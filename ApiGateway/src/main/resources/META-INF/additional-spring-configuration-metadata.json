@@ -1,0 +1,27 @@
+{"properties": [
+  {
+    "name": "spring.cloud.gateway.route[0].predicates[0]",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.cloud.gateway.route[0].predicates[0]'"
+  },
+  {
+    "name": "Server.port",
+    "type": "java.lang.String",
+    "description": "A description for 'Server.port'"
+  },
+  {
+    "name": "spring.cloud.gateway.route[0].predicates[0]",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.cloud.gateway.route[0].predicates[0]'"
+  },
+  {
+    "name": "Server.port",
+    "type": "java.lang.String",
+    "description": "A description for 'Server.port'"
+  },
+  {
+    "name": "eureka.instance.client.serverUrl.defaultZone",
+    "type": "java.lang.String",
+    "description": "A description for 'eureka.instance.client.serverUrl.defaultZone'"
+  }
+]}

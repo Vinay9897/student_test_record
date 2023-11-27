@@ -1,0 +1,27 @@
+{"properties": [
+  {
+    "name": "javax.persistence.jdbc.url",
+    "type": "java.lang.String",
+    "description": "A description for 'javax.persistence.jdbc.url'"
+  },
+  {
+    "name": "javax.persistence.jdbc.driver",
+    "type": "java.lang.String",
+    "description": "A description for 'javax.persistence.jdbc.driver'"
+  },
+  {
+    "name": "javax.persistence.jdbc.user",
+    "type": "java.lang.String",
+    "description": "A description for 'javax.persistence.jdbc.user'"
+  },
+  {
+    "name": "javax.persistence.jdbc.password",
+    "type": "java.lang.String",
+    "description": "A description for 'javax.persistence.jdbc.password'"
+  },
+  {
+    "name": "eureka.instance.client.serverUrl.defaultZone",
+    "type": "java.lang.String",
+    "description": "A description for 'eureka.instance.client.serverUrl.defaultZone'"
+  }
+]}
