@@ -10,6 +10,7 @@ import com.quiz.entities.QuizEntity;
 import com.quiz.repositories.QuizRepository;
 import com.quiz.services.QuestionClient;
 import com.quiz.services.QuizServices;
+import com.quiz.services.ResultClient;
 
 @Service
 public class QuizServicesImpl implements QuizServices {
@@ -19,6 +20,9 @@ public class QuizServicesImpl implements QuizServices {
 	
 	@Autowired
 	QuestionClient questionClient;
+	
+	@Autowired
+	ResultClient resultClient;
 	
 	public QuizServicesImpl(QuizRepository quizRepository, QuestionClient questionClient) {
 		super();
@@ -36,6 +40,7 @@ public class QuizServicesImpl implements QuizServices {
 		// TODO Auto-generated method stub
 		QuizEntity quiz = quizRepository.findById(id).orElseThrow(() -> new RuntimeException("Quiz " + id + " not found"));
 		quiz.setQuestions(questionClient.getQuestionOfQuiz(quiz.getId()));
+		quiz.setResult(resultClient.getResultOfQuiz(quiz.getId()));
 		return quiz;
 	}
 
@@ -45,6 +50,7 @@ public class QuizServicesImpl implements QuizServices {
 		List<QuizEntity> newQuizzesList = quizRepository.findAll();
 		newQuizzesList.stream().map(quiz -> {
 			quiz.setQuestions(questionClient.getQuestionOfQuiz(quiz.getId()));
+			quiz.setResult(resultClient.getResultOfQuiz(quiz.getId()));
 			
 			return quiz;
 		}).collect(Collectors.toList());

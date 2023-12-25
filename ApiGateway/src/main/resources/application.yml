@@ -1,0 +1,38 @@
+spring:
+ cloud:
+   gateway:
+     discovery:
+       locator:
+         enabled: true
+     routes:
+       - id: QUIZ-SERVICE
+         uri: lb://QUIZ-SERVICE
+         predicates:
+           - Path=/quiz/**, /quiz-test/**
+#         filters:
+#           - AuthenticationFilter
+
+       - id: QUESTION-SERVICE
+         uri: lb://QUESTION-SERVICE
+         predicates:
+           - Path=/question/**
+#         filters:
+#           - AuthenticationFilter
+#
+       - id: AUTHENTICATION-SERVICE
+         uri: lb://AUTHENTICATION-SERVICE
+         predicates:
+           - Path=/auth/login/**
+       
+       - id: RESULT-SERVICE
+         uri: lb://RESULT-SERVICE
+         predicates: 
+           - Path=/result/**
+#
+ application:
+   name: API-GATEWAY
+#
+eureka:
+  client:
+    service-url:
+      defaultZone : http://localhost:8761/eureka/

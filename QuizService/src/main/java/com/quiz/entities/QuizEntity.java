@@ -20,6 +20,24 @@ public class QuizEntity {
 	
 	transient private List<QuestionEntity> questions;
 	
+	transient private ResultEntity result;
+	
+	public QuizEntity(Long id, String title, List<QuestionEntity> questions, ResultEntity result) {
+		super();
+		this.id = id;
+		this.title = title;
+		this.questions = questions;
+		this.result = result;
+	}
+
+	public ResultEntity getResult() {
+		return result;
+	}
+
+	public void setResult(ResultEntity result) {
+		this.result = result;
+	}
+
 	public QuizEntity(Long id, String title, List<QuestionEntity> questions) {
 		super();
 		this.id = id;
@@ -30,17 +48,21 @@ public class QuizEntity {
 	public List<QuestionEntity> getQuestions() {
 		return questions;
 	}
+	
 	public void setQuestions(List<QuestionEntity> list) {
 		this.questions = list;
 	}
+	
 	@Override
 	public String toString() {
-		return "QuizEntity [id=" + id + ", title=" + title + ", questions=" + questions + "]";
+		return "QuizEntity [id=" + id + ", title=" + title + ", questions=" + questions + ", result=" + result + "]";
 	}
+	
 	public QuizEntity() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
 	public QuizEntity(Long id, String title) {
 		super();
 		this.id = id;
@@ -49,12 +71,15 @@ public class QuizEntity {
 	public Long getId() {
 		return id;
 	}
+	
 	public void setId(Long id) {
 		this.id = id;
 	}
+	
 	public String getTitle() {
 		return title;
 	}
+	
 	public void setTitle(String title) {
 		this.title = title;
 	}
