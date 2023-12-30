@@ -7,6 +7,9 @@ spring:
   cloud:
     config:
       server:
+#        bootstrap: true
         git:
-          uri: https://github.com/igorkosandyak/demo-config-server.git
+          uri: https://github.com/Vinay9897/spring-config-server.git
           clone-on-start: true
+          
+#          https://github.com/igorkosandyak/demo-config-server.git

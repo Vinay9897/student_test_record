@@ -18,7 +18,7 @@ spring:
            - Path=/question/**
 #         filters:
 #           - AuthenticationFilter
-#
+
        - id: AUTHENTICATION-SERVICE
          uri: lb://AUTHENTICATION-SERVICE
          predicates:
@@ -28,10 +28,10 @@ spring:
          uri: lb://RESULT-SERVICE
          predicates: 
            - Path=/result/**
-#
+
  application:
    name: API-GATEWAY
-#
+
 eureka:
   client:
     service-url:

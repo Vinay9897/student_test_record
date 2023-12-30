@@ -1,6 +1,6 @@
 spring:
   application:
-    name: QUIZ-SERVICE
+    name: QUESTION-SERVICE
   cloud:
     config:
       import: "optional:configserver:"
